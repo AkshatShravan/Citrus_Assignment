@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="logo-container">
+        <img class="logo" src="assets/images/C.svg" />
+        <div class="business-title">Business Details</div>
+    </div>
+    <div class="stepper-page">
+        <button [ngClass]="{'completed': currentStep != 0}" [disabled]="currentStep != 0">1</button>
+        <button [ngClass]="{'completed': currentStep != 1 && currentStep != 0}" [disabled]="currentStep != 1">2</button>
+        <button [ngClass]="{'completed': currentStep != 2 && currentStep != 1 && currentStep != 0}" [disabled]="currentStep != 2">3</button>
+    </div>
+    <div *ngIf="currentStep == 0" class="stepper-container">
+      <div class="step-title">{{ stepTitle }}</div>
+      <div class="greeting">Hi Chandra Mohan!</div>
+      <div class="step-content">
+        <div (click)="nextStep()" class="step" *ngFor="let step of firstSteps; let i = index" [class.active]="currentStep === i">
+          <div class="step-description">{{ step }}</div>
+        </div>
+      </div>
+      <div class="who-are-you">Who are you?</div>
+      <img class="avatar" src="assets/images/Rectangle.svg" alt="Avatar" />
+      <div class="progress-bar">
+        <div class="step-number">{{ currentStep + 1 }}</div>
+        <div class="progress-bg"></div>
+        <div class="progress-indicator" [style.width]="(currentStep+1) / 3 * 100 + '%'"></div>
+      </div>
+      <div class="step-buttons">
+      </div>
+    </div>
+    <div *ngIf="currentStep == 1" class="stepper-container">
+      <div class="step-content">
+        <div (click)="nextStep()" class="step" *ngFor="let step of secondSteps; let i = index" [class.active]="currentStep === i">
+          <div class="step-description">{{ step }}</div>
+        </div>
+      </div>
+      <div class="who-are-you">No. of monthly shipments you do?</div>
+      <img class="avatar" src="assets/images/Group.svg" alt="Avatar" />
+      <div class="progress-bar">
+        <div class="step-number">{{ currentStep + 1 }}</div>
+        <div class="progress-bg"></div>
+        <div class="progress-indicator" [style.width]="(currentStep+1) / 3 * 100 + '%'"></div>
+      </div>
+      <div class="step-buttons">
+      </div>
+    </div>
+    <div *ngIf="currentStep == 2" class="stepper-container">
+      <div class="step-content">
+        <div (click)="nextStep()" class="checkbox" *ngFor="let step of thirdSteps; let i = index" [class.active]="currentStep === i">
+          <input class="checkbox" class="me-3" type="checkbox"> {{ step}}
+        </div>
+        <div class="step">
+          <div [routerLink]="['/otp']" class="step-description">Done</div>
+        </div>
+      </div>
+      <div class="who-are-you">Where do you ship from?</div>
+      <img class="avatar" src="assets/images/Port.svg" alt="Avatar" />
+      <div class="progress-bar">
+        <div class="step-number">{{ currentStep + 1 }}</div>
+        <div class="progress-bg"></div>
+        <div class="progress-indicator" [style.width]="(currentStep+1) / 3 * 100 + '%'"></div>
+      </div>
+      <div class="step-buttons">
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,26 @@
+<div class="profile-container">
+    <div class="container">
+        <div class="left-side">
+            <div class="image-container">
+                <img src="assets/images/profile_image.svg" alt="">
+                <i class="fa-solid fa-camera"></i>
+            </div>
+            <div class="details">
+                <div class="name">Sunil Gauswami</div>
+                <div class="company">Boxnbiz Technologies Pvt. Ltd.</div>
+            </div>
+            <div class="buttons">
+                <ul>
+                    <li [routerLink]="['/home/profile/user-details']" routerLinkActive="active" ><i class="fa-solid fa-user primary-color"></i> User Details</li>
+                    <li><img src="assets/images/kyc.svg" alt=""> KYC <span class="status">Pending</span></li>
+                    <li><img src="assets/images/lock.svg" alt=""> Reset Password</li>
+                    <li><i class="fa-solid fa-sheet-plastic primary-color"></i> Cancellation</li>
+                    <li (click)="signOut()"><img src="assets/images/logout.svg" alt=""> Sign out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-side">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

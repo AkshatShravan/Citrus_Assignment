@@ -1,0 +1,196 @@
+<div class="container">
+    <div class="background">
+      <div id="svg-container">
+        <img src="assets/images/search_bg.svg" alt="Search BG">
+      </div>
+    </div>
+    <div class="search-fields">
+        <div class="search-container">
+            <div class="radio-select">
+                <div [ngClass]="{'selected':selectedOption == 'freight'}" class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                    value="freight" [checked]="selectedOption === 'freight'" (change)="onChange('freight')"
+                    [style.background-color]="selectedOption === 'freight' ? '#018353' : ''">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Search Freight
+                  </label>
+                </div>
+                <div [ngClass]="{'selected':selectedOption == 'schedule'}" class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                    value="schedule" [checked]="selectedOption === 'schedule'" (change)="onChange('schedule')"
+                    [style.background-color]="selectedOption === 'schedule' ? '#018353' : ''">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Search Schedule
+                  </label>
+                </div>
+              </div>
+              <div class="form-fields" *ngIf="selectedOption == 'freight'">
+                <div class="from-destination">
+                    <div class="title">
+                        <span>From</span>
+                        <span>Destination</span>
+                    </div>
+                    <div class="to-destination">
+                        <div class="left-block">
+                            <div class="content">
+                                <h1 class="title">{{fromLocation.title}}</h1>
+                                <span class="subtitle">{{fromLocation.subTitle}}</span>
+                            </div>
+                            <div class="dropdown">
+                                <ul *ngFor="let data of fromList">
+                                    <li>
+                                        <h2>{{data.title}}</h2>
+                                        <span>{{data.subTitle}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="right-block">
+                            <div class="content">
+                                <h1 class="title">{{destinationLocation.title}}</h1>
+                                <span class="subtitle">{{destinationLocation.subTitle}}</span>
+                            </div>
+                            <div class="dropdown">
+                                <ul *ngFor="let data of destList">
+                                    <li>
+                                        <h2>{{data.title}}</h2>
+                                        <span>{{data.subTitle}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="check-box">
+                        <input type="checkbox" id="ckeck">
+                        <label for="check">I Want Pickup/Clearance Service</label>
+                    </div>
+                </div>
+                <div class="commodity">
+                    <div class="title">
+                        <span>Commodity</span>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">{{fromLocation.title}}</h1>
+                        <span class="subtitle">{{fromLocation.subTitle}}</span>
+                    </div>
+                    <div class="dropdown">
+                        <ul *ngFor="let data of fromList">
+                            <li>
+                                <h2>{{data.title}}</h2>
+                                <span>{{data.subTitle}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bl-type">
+                    <div class="title">
+                        <span>BL Type</span>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Select BL Type</h1>
+                        <span class="subtitle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <h2>Select BL 1</h2>
+                                <span>BL 1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bl-type">
+                    <div class="title">
+                        <span>Container Type</span>
+                    </div>
+                    <div class="content">
+                        <h1 class="title">Select Container Type</h1>
+                        <span class="subtitle"><i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <h2>Select Container 1</h2>
+                                <span>Container 1</span>
+                            </li>
+                            <li>
+                                <h2>Select Container 1</h2>
+                                <span>Container 1</span>
+                            </li>
+                            <li>
+                                <h2>Select Container 1</h2>
+                                <span>Container 1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="containers">
+                    <div class="title">
+                        <span>No. of Container</span>
+                    </div>
+                    <div class="content">
+                        <div (click)="decrease()" class="decrease">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <span>{{noOfContainer}}</span>
+                        <div (click)="increase()" class="increase">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="form-fields" *ngIf="selectedOption == 'schedule'">
+                <div class="from-destination schedule">
+                    <div class="title">
+                        <span>From</span>
+                        <span>Destination</span>
+                    </div>
+                    <div class="to-destination">
+                        <div class="left-block">
+                            <div class="content">
+                                <h1 class="title">{{fromLocation.title}}</h1>
+                                <span class="subtitle">{{fromLocation.subTitle}}</span>
+                            </div>
+                            <div class="dropdown">
+                                <ul *ngFor="let data of fromList">
+                                    <li>
+                                        <h2>{{data.title}}</h2>
+                                        <span>{{data.subTitle}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="right-block">
+                            <div class="content">
+                                <h1 class="title">{{destinationLocation.title}}</h1>
+                                <span class="subtitle">{{destinationLocation.subTitle}}</span>
+                            </div>
+                            <div class="dropdown">
+                                <ul *ngFor="let data of destList">
+                                    <li>
+                                        <h2>{{data.title}}</h2>
+                                        <span>{{data.subTitle}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="check-box">
+                        <input type="checkbox" id="ckeck">
+                        <label for="check">I Want Pickup/Clearance Service</label>
+                    </div>
+                </div>
+              </div>
+              <div class="search-button">
+                    <button>Search</button>
+              </div>
+        </div>
+    </div>
+  </div>
+  

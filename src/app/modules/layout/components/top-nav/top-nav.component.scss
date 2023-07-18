@@ -1,0 +1,86 @@
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    // width: 100vw;
+    width: -webkit-fill-available;
+    position: fixed;
+    z-index: 40;
+    background-color: #fff;
+  }
+
+  .menu:hover{
+    cursor: pointer;
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .company-logo img {
+    max-height: 40px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        .dropdown{
+            display: block;
+            animation: slideDown 0.2s steps(60, end) forwards;
+        }
+    }
+    .dropdown{
+        position: absolute;
+        top: 100%;
+        background: #fff;
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        display: none;
+        ul{
+            padding: 0px 10px;
+            li{
+                list-style: none;
+                padding: 10px;
+                cursor: pointer;
+                transition: .1s linear;
+                &:hover{
+                    background: #018353;
+                    color: #fff;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+  }
+  
+  .profile-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .user-name {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  

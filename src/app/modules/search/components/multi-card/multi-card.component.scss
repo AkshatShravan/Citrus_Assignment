@@ -1,0 +1,74 @@
+.multi-card{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    background: #9797971F;
+    // border-radius: 15px;
+    overflow: hidden;
+    z-index: 20;
+    .container{
+        display: flex;
+        align-items: center;
+        .title{
+            flex: 0.2;
+            font-size: 1.2rem;
+            span{
+                color: #018353;
+                font-weight: bold;
+                font-size: 1.4rem;
+            }
+        }
+        .card-section{
+            flex: 0.8;
+            display: flex;
+            padding: 10px;
+            .card-container{
+                box-shadow: 0px 1px 4px 0px #979797;
+                margin: 5px;
+                border-radius:7px;
+                padding: 30px 7px;
+                background-color: #fff;
+                transition: .1s linear;
+                z-index: 9999;
+                img{
+                    padding: 15px 0px;
+                }
+                .title.banana{
+                    color: #B72732;
+                    font-size: 1rem;
+                }
+                .title.calendar{
+                    color: #5A27CE;
+                    font-size: 1rem;
+                }
+                .title.dollar{
+                    color: #4239EA;
+                    font-size: 1rem;
+                }
+                .title.support{
+                    color: #563996;
+                    font-size: 1rem;
+                }
+                .title.whatsapp{
+                    color: #2CB742;
+                    font-size: 1rem;
+                }
+                .description{
+                    font-size: 0.8rem;
+                }
+                &:hover{
+                    transform: scale(1.03);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.bottom{
+    margin-top: 350px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}

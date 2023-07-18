@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="logo-container">
+        <img class="logo" src="assets/images/C.svg" />
+        <div class="registration-title">Registration</div>
+    </div>
+    <div class="form-container">
+      <div class="form-content">
+        <div class="form-header">Signup</div>
+        <div class="form-title">To Easily refer container online.</div>
+        <div class="form-fields">
+            <div class="input-wrapper">
+                <label for="company">Company</label>
+                <input id="company" type="text" placeholder="Enter company name" />
+              </div>
+              <div class="input-wrapper">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter Full Name" />
+              </div>
+              <div class="input-wrapper">
+                <label for="emailInput">Email</label>
+                <input id="emailInput" type="text" placeholder="Enter Email address" />
+              </div>
+          <div class="input-wrapper">
+            <label for="mobile">Mobile Number</label>
+            <div class="mobile-group">
+              <div class="country-code">+91</div>
+              <input id="mobile" type="tel" placeholder="Enter Mobile number">
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="pasword">Password</label>
+            <input type="password" id="password" placeholder="Enter Password">
+          </div>
+        </div>
+        <div class="form-footer">
+          <button class="login-btn" [routerLink]="['/stepper']">Sign Up</button>
+          <div class="existing-account">
+            <span>Already have an account?</span>
+            <a [routerLink]="['/login']" class="login-link">Login here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+   

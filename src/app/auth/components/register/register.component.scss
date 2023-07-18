@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    zoom: 80%;
+    margin-top:3rem;
+  }
+
+  .logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px;
+  }
+  
+  .form-container {
+    width: 90%;
+    max-width: 550px;
+    margin-top:1.3rem ;
+    height: auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+  
+  .form-content {
+    position: relative;
+  }
+  
+  .form-header {
+    color: #018353;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .form-title{
+    color: #7E7E7E;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    font-style: normal;
+    margin: 10px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .form-fields {
+    margin-top: 2rem;
+  }
+  
+  .input-group {
+    display: flex;
+  }
+  
+  .country-code {
+    width: 55px;
+    height: 48px;
+    background-color: #048555;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-footer {
+    margin-top: 2rem;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #018353;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .existing-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #505050;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-top: 1.2rem;
+  }
+  
+  .login-link {
+    color: #0079D5;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  
+  .registration-title {
+    color: #018353;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+
+  label {
+    color: #231F20;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+  
+  input {
+    width: 100%;
+    height: 47.56px;
+    background: #E9E9E9;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 1.2rem;
+    border: none;
+  }
+
+  .mobile-group{
+    display: flex;
+  }
+  

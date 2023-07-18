@@ -1,0 +1,45 @@
+<div class="order-container">
+    <div class="container">
+        <div class="title">
+            My Bookings
+        </div>
+        <div class="verify">
+            <div class="left"><img class="me-3" src="assets/images/alert.svg" alt="">Looks like your account is not verified</div>
+            <div class="right">Apply Now</div>
+        </div>
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+            <mat-tab label="All">
+                <div class="tab-content">
+                    <app-cards [image]="'assets/images/navio.svg'" [status]="'Paid'"></app-cards>
+                    <app-cards [image]="'assets/images/msc.svg'" [status]="'Out Standing'"></app-cards>
+                    <app-cards [image]="'assets/images/booking.svg'" [status]="'Paid'"></app-cards>
+                    <app-cards [image]="'assets/images/navio.svg'" [status]="'Paid'"></app-cards>
+                </div>
+            </mat-tab>
+            <mat-tab label="Active">
+                <div class="tab-content">
+                    <app-cards [image]="'assets/images/booking.svg'" [status]="'Paid'"></app-cards>
+                    <app-cards [image]="'assets/images/navio.svg'" [status]="'Paid'"></app-cards>
+                    <app-cards [image]="'assets/images/msc.svg'" [status]="'Out Standing'"></app-cards>
+                    <app-cards [image]="'assets/images/navio.svg'" [status]="'Paid'"></app-cards>
+                </div>
+            </mat-tab>
+            <mat-tab label="Cancelled">
+                <div class="tab-content">
+                    <app-cards [image]="'assets/images/msc.svg'" [status]="'Cancelled'"></app-cards>
+                    <app-cards [image]="'assets/images/navio.svg'" [status]="'Cancelled'"></app-cards>
+                    <app-cards [image]="'assets/images/booking.svg'" [status]="'Cancelled'"></app-cards>
+                    <app-cards [image]="'assets/images/navio.svg'" [status]="'Cancelled'"></app-cards>
+                </div>
+            </mat-tab>
+            <mat-tab label="Delivered">
+                <div class="tab-content">
+                    <app-cards [image]="'assets/images/msc.svg'" [status]="'Delivered'"></app-cards>
+                    <app-cards [image]="'assets/images/navio.svg'" [status]="'Delivered'"></app-cards>
+                    <app-cards [image]="'assets/images/booking.svg'" [status]="'Delivered'"></app-cards>
+                    <app-cards [image]="'assets/images/navio.svg'" [status]="'Delivered'"></app-cards>
+                </div>
+            </mat-tab>
+          </mat-tab-group>
+    </div>
+</div>

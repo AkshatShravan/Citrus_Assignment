@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: white;
+    gap: 60px;
+}
+  .logo {
+    width: 176px;
+    height: 57px;
+  }
+  
+  .otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 42px;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+  
+  .otp-header {
+    color: #018353;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .otp-instructions {
+    color: #7E7E7E;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .otp-input {
+    width: 52.69px;
+    height: 66px;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: 0.5px solid #C5C5C5;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
+  }
+  
+  .verify-btn {
+    width: 386px;
+    height: 54px;
+    background-color: #018353;
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  
+  .otp-info {
+    color: #231F20;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 30px;
+  }
+  
+  .resend-info {
+    color: #0079D5;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  
+  .invalid-otp {
+    border-color: red;
+  }
+
+
+  .invalidError{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+  }
+  

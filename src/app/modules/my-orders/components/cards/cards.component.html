@@ -1,0 +1,61 @@
+<div class="card-content my-2">
+    <div class="first">
+        <img [src]="image" alt="">
+        <div class="content">
+            <div class="sub-title">Booking Id : BNB001565</div>
+            <div class="sub-booking">Booking  : 19/03/2023</div>
+            <div class="title">IN NSA  <i class="fa-solid fa-arrow-right"></i>  AE JEA</div>
+            <div class="count"><span class="badge bg-primary px-2 me-2">Grapes</span>1 x 40HC RF</div>
+        </div>
+    </div>
+    <div class="second pt-2">
+        <div class="top-content">
+            <p>MBL : AML2037997</p>
+            <p>HBL : IFL/HBL/23/013633</p>
+            <p>Pick up : Chandwad</p>
+            <p>Status : <span [ngClass]="getStatusClass(status)">{{status}}</span></p>
+        </div>
+        <div class="content-style">
+            <img src="assets/images/ship.svg" alt="">
+            <div class="content">
+                <div class="title">Vessel</div>
+                <div class="sub-title">Montepillier</div>
+            </div>
+        </div>
+        <div class="content-style">
+            <img src="assets/images/timer.svg" alt="">
+            <div class="content">
+                <div class="title">Cut Off</div>
+                <div class="sub-title">23 Jan 2023</div>
+            </div>
+        </div>
+        <div class="content-style">
+            <img src="assets/images/recent.svg" alt="">
+            <div class="content">
+                <div class="title">ETA</div>
+                <div class="sub-title">30 Jan 2023</div>
+            </div>
+        </div>
+        <div class="content-style">
+            <img src="assets/images/recent.svg" alt="">
+            <div class="content">
+                <div class="title">ETA</div>
+                <div class="sub-title">30 Jan 2023</div>
+            </div>
+        </div>
+    </div>
+    <div class="third">
+        <div class="title">
+            Waiting for acceptance
+        </div>
+        <div class="sub-title">
+            DO expected within 2hrs
+        </div>
+    </div>
+    <div class="fourth">
+        <div class="view-details">
+            <button>View Details <i class="fa-solid fa-caret-up fa-rotate-90"></i></button>
+            <span class="track"><i class="fa-solid fa-location-dot"></i> Track Order</span>
+        </div>
+    </div>
+</div>

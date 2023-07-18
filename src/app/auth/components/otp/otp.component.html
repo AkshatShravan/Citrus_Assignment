@@ -1,0 +1,23 @@
+<div class="container">
+    <img class="logo" src="assets/images/citrus.svg" alt="Logo">
+    <div class="otp-container">
+      <div class="otp-header">OTP Verification</div>
+      <div class="otp-instructions">Check your WhatsApp/email and enter 6-digit OTP</div>
+      <div class="otp-info">OTP sent to +91xxxxxxxxxx</div> 
+      <form [formGroup]="otpForm" >
+          <div class="otp-inputs">
+            <span *ngIf="otpForm.invalid && invalidOtp" class="text-danger invalidError">Wrong OTP</span>
+                <input id="otp1" [class.invalid-otp]="invalidOtp && otpForm.controls['digit1'].invalid" type="text" formControlName="digit1" maxlength="1" class="otp-input" (input)="moveToNextInput($event, '', 'otp2')" (keydown)="moveToNextInput($event, '', 'otp2')" />
+                <input id="otp2" [class.invalid-otp]="invalidOtp && otpForm.controls['digit2'].invalid" type="text" formControlName="digit2" maxlength="1" class="otp-input" (input)="moveToNextInput($event, 'otp1', 'otp3')" (keydown)="moveToNextInput($event, 'otp1', 'otp3')" />
+                <input id="otp3" [class.invalid-otp]="invalidOtp && otpForm.controls['digit3'].invalid" type="text" formControlName="digit3" maxlength="1" class="otp-input" (input)="moveToNextInput($event, 'otp2', 'otp4')" (keydown)="moveToNextInput($event, 'otp2', 'otp4')" />
+                <input id="otp4" [class.invalid-otp]="invalidOtp && otpForm.controls['digit4'].invalid" type="text" formControlName="digit4" maxlength="1" class="otp-input" (input)="moveToNextInput($event, 'otp3', 'otp5')" (keydown)="moveToNextInput($event, 'otp3', 'otp5')" />
+                <input id="otp5" [class.invalid-otp]="invalidOtp && otpForm.controls['digit5'].invalid" type="text" formControlName="digit5" maxlength="1" class="otp-input" (input)="moveToNextInput($event, 'otp4', 'otp6')" (keydown)="moveToNextInput($event, 'otp4', 'otp6')" />
+                <input id="otp6" [class.invalid-otp]="invalidOtp && otpForm.controls['digit6'].invalid" type="text" formControlName="digit6" maxlength="1" class="otp-input" (input)="moveToNextInput($event, 'otp5', '')" (keydown)="moveToNextInput($event, 'otp5', '')" />  
+              
+        </div>
+      </form>
+      <div class="resend-info">Resend OTP in {{countdown}}</div>
+      <button (click)="verifyOtp()" class="verify-btn">Verify OTP</button>
+    </div>
+  </div>
+  

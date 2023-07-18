@@ -1,0 +1,42 @@
+.header{
+    color: #494949;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px;
+    margin: 0;
+}
+hr{
+    margin: 0px !important;
+}
+
+.text-center{
+    font-size: 1.2rem;
+}
+
+.buttons{
+    .no{
+        border: 1px solid #018353;
+        color:#018353;
+        padding: 10px 20px;
+        border-radius:7px;
+        margin: 0px 10px;
+        &:hover{
+            background-color: #018353;
+            color: #fff;
+        }
+    }
+    .yes{
+        border: 1px solid #FF0000;
+        color: #FF0000;
+        padding: 10px 30px;
+        border-radius:7px;
+        margin: 0px 10px;
+        &:hover{
+            background-color: #FF0000;
+            color: #fff;
+        }
+    }
+}

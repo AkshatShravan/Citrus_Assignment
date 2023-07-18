@@ -1,0 +1,31 @@
+<div class="container">
+    <img class="logo" src="assets/images/citrus.svg" alt="Logo" />
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="login-box">
+            <div class="title">Login</div>
+            <div class="subtitle">Login and continue booking refeer container online</div>
+            <div class="input-wrapper">
+              <label for="emailInput">Email</label>
+              <input formControlName="email" id="emailInput" type="email" placeholder="Enter Email address" />
+              <div class="error-message" *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
+                <span class="text-danger" *ngIf="loginForm.controls['email']">Invalid email address</span>
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <div class="input-wrapper-label">
+                  <label for="passwordInput">Password</label>
+                  <div class="forgot-password" [routerLink]="['/forgot']" >Forgot Password?</div>
+              </div>
+              <input formControlName="password" id="passwordInput" type="password" placeholder="Enter Password" />
+            </div>
+            <div class="button-wrapper">
+              <button [routerLink]="['/home']" [disabled]="loginForm.invalid" class="login-button">Login</button>
+            </div>
+            <div class="register-link">
+              Don't have an account? <span class="register-text" [routerLink]="['/sign-up']" >Register</span>
+            </div>
+          </div>
+    </form>
+  </div>
+  
+  

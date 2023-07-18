@@ -1,0 +1,27 @@
+<div class="top-nav shadow-sm">
+    <div class="menu">
+        <img src="assets/images/Menu.svg" alt="Menu" />
+    </div>
+    <div class="container">
+        <div class="company-logo">
+            <!-- Replace "company-logo.png" with the path to your company logo image -->
+            <img src="assets/images/citrus.svg" alt="Company Logo">
+          </div>
+          <div class="user-profile">
+            <div class="profile-image">
+              <!-- Replace "profile-image.png" with the path to the user's profile image -->
+              <img src="assets/images/profile.svg" alt="Profile Image">
+            </div>
+            <div class="user-name">
+              Chandra Mohan
+            </div>
+            <div class="dropdown shadow-sm">
+                <ul class="text-center">
+                    <li [routerLink]="['/home/profile/user-details']" class="mt-2">Profile</li>
+                    <li [routerLink]="['/home/help']">Help & Support</li>
+                    <li [routerLink]="['/']">Logout</li>
+                </ul>
+            </div>
+          </div>
+    </div>
+  </div>
